@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
 
 	def new
 		@message = Message.new
-		@company = Company.find(params[:id])
+		@company = Company.find(params[:company_id])
 	end
 
 	def create

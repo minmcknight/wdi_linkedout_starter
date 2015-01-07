@@ -6,6 +6,8 @@ class CompaniesController < ApplicationController
 	end
 
 	def show
+		@message = Message.new
+		@message.company_id = @company.id
 	end
 
 	def edit
