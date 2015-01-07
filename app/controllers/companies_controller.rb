@@ -6,7 +6,6 @@ class CompaniesController < ApplicationController
 	end
 
 	def show
-		@message = Message.new
 	end
 
 	def edit
@@ -22,9 +21,14 @@ class CompaniesController < ApplicationController
 	end
 
 	def update
-		@company = Company.update(company_params)
+		@company.update(company_params)
 		save(@company)
 	end
+
+	 def destroy
+    @company.destroy
+    redirect_to companies_path
+  end
 
 	private
 

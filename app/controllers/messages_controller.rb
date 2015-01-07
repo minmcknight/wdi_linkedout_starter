@@ -26,6 +26,11 @@ class MessagesController < ApplicationController
 		save(@message)
 	end
 
+	 def destroy
+    @message.destroy
+      redirect_to companies_path
+  end
+
 	private
 
 	def save(message)
